@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0a1628;
+  --raised: #0f2038;
+  --sunken: #081221;
+  --line: #1f3a5c;
+  --line-strong: #2d5280;
+  --ink: #e4ecf5;
+  --muted: #93a7bf;
+  --accent: #45c8e6;
+  --accent-ink: #062033;
+  --ok: #4fd18b;
+  --warn: #f0b54a;
+  --bad: #ff7a6b;
+  --info: #8fb4ff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-raised: var(--raised);
+  --color-sunken: var(--sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-info: var(--info);
+  --font-sans: "Archivo Variable", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+.type-condensed {
+  font-variation-settings: "wdth" 75;
+  font-weight: 600;
+}
+.type-display {
+  font-variation-settings: "wdth" 115;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
